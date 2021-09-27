@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.5" xmlns="http://Java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>curso-jsp</display-name>
+	<filter>
+		<description>
+		</description>
+		<display-name>FilterAutenticacao</display-name>
+		<filter-name>FilterAutenticacao</filter-name>
+		<filter-class>filters.FilterAutenticacao</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>FilterAutenticacao</filter-name>
+		<url-pattern>/FilterAutenticacao</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletLogin</display-name>
+		<servlet-name>ServletLogin</servlet-name>
+		<servlet-class>servlets.ServletLogin</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ServletUserController</display-name>
+		<servlet-name>ServletUserController</servlet-name>
+		<servlet-class>servlets.ServletUserController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletLogin</servlet-name>
+		<url-pattern>/ServletLogin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletUserController</servlet-name>
+		<url-pattern>/ServletUserController</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
